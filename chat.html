@@ -66,7 +66,7 @@
                   <button id="uploadButton" type="submit" onclick="document.getElementById('image_input').click();"><i class="fas fa-paperclip"></i></i></button>
                   <!-- 隱藏的檔案選擇框 -->
                   <input type="file" id="image_input" name="image" style="display: none;" accept="image/*" onchange="handleFileUpload(event)">                 
-                  <input type="text" id="chat_input" name="search" placeholder="傳訊息給 覺 GPT..." style="flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 5px; margin-right: 10px;margin-left: 10px;" onkeydown="checkEnter(event)">
+                  <input type="text" id="chat_input" name="search" placeholder="傳訊息給 覺 GPT..." style="flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 5px; margin-right: 10px;margin-left: 10px;">
                   <button id="search" type="submit" onclick="sendMessage()"><i class="far fa-paper-plane"></i></button>
                 </div>
               </div>
@@ -222,23 +222,6 @@
             displayMessage(data.choices[0]?.message?.content || "No response.", "bot");
             isTarotReading = false;
               })
-          }
-          function checkEnter(event) {
-          if (event.key === "Enter") {
-            const inputField = document.getElementById("chat_input");
-            const message = inputField.value;
-            if (!message) return;
-            // sendMessage();
-            // inputField.value = "";
-            }
-            document.getElementById("chat_input").addEventListener("compositionend", function (event) {
-            const inputField = document.getElementById("chat_input");
-            const message = inputField.value;
-            if (message) {
-              sendMessage();
-              inputField.value = "";
-            }
-          });
           }
           // 處理圖片上傳
           function handleFileUpload(event) {
