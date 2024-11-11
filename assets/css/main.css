@@ -6,6 +6,60 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+#chat-container {
+	height: 400px; /* 設定初始高度 */
+	width: 100%;   /* 設定寬度以適應父容器 */
+	overflow-y: auto; /* 加上垂直滾動條 */
+	padding: 10px;
+	border: 1px solid #ccc; /* 增加邊框讓區域更加明顯 */
+	background-color: #f9f9f9; /* 背景色 */
+	border-radius: 10px;
+  }
+
+  .chat-box {
+    display: flex;
+    align-items: flex-start;
+    margin: 10px 0;
+  }
+
+  .user-message {
+    justify-content: flex-end;
+  }
+
+  .bot-message {
+    justify-content: flex-start;
+  }
+
+  .chat-message {
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 14px;
+  }
+
+  .user-message .chat-message {
+    background-color: #d1e7dd;
+    border-top-right-radius: 0;
+  }
+
+  .bot-message .chat-message {
+    background-color: #f8d7da;
+    border-top-left-radius: 0;
+  }
+
+  .avatar {
+	font-size: 24px; /* 調整圖示大小 */
+	color: #007bff; /* 使用者頭像顏色 */
+	margin: 0 10px;
+  }
+  
+  .user-message .avatar {
+	order: 1;
+  }
+  
+  .bot-message .avatar {
+	order: -1;
+  }
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
