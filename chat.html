@@ -24,14 +24,12 @@
 								<a href="index.html" class="logo">
 									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">覺gpt</span>
 								</a>
-
 							<!-- Nav -->
 								<nav>
 									<ul>
 										<li><a href="#menu">Menu</a></li>
 									</ul>
 								</nav>
-
 						</div>
 					</header>
 
@@ -51,72 +49,35 @@
 					<div id="main">
 						<div class="inner">
 							<div>
-                <div id="chat-container" style="overflow-y: auto; max-height: 400px; padding: 10px;">
+                <div id="chat-container" style="overflow-y: auto; padding: 10px;">
                   <div id="model-info" style="font-size: 14px; color: #888; margin-bottom: 10px;">
                     <select id="model-select" onchange="updateModelName()">
                     </select>
                   </div>
+                  <div id="chat-content" style="flex: 1; overflow-y: auto; padding: 10px;">
+                    <!-- 聊天訊息會顯示在這裡 -->
+                  </div>
                 </div>
-                <div style="display: flex; flex-direction: column; padding: 10px; background-color: #fff; border-top: 1px solid #ddd;">
-                  <!-- 圖片預覽區域，顯示在輸入框上方 -->
-                  <div id="imagePreview" style="margin-bottom: 10px; display: flex; justify-content: flex-end;">
+                <div id="input-container">
+                  <!-- 圖片預覽區域 -->
+                  <div id="imagePreview">
                     <!-- 圖片會顯示在這裡 -->
                   </div>
-                <div style="display: flex; padding: 10px; background-color: #fff;">
-                  <button id="uploadButton" type="submit" onclick="document.getElementById('image_input').click();"><i class="fas fa-paperclip"></i></i></button>
-                  <!-- 隱藏的檔案選擇框 -->
-                  <input type="file" id="image_input" name="image" style="display: none;" accept="image/*" onchange="handleFileUpload(event)">                 
-                  <input type="text" id="chat_input" name="search" placeholder="傳訊息給 覺 GPT..." style="flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 5px; margin-right: 10px;margin-left: 10px;">
-                  <button id="search" type="submit" onclick="sendMessage()"><i class="far fa-paper-plane"></i></button>
+                  <div id="chat-input-bar">
+                    <button id="uploadButton" onclick="document.getElementById('image_input').click();">
+                      <i class="fas fa-paperclip"></i>
+                    </button>
+                    <input type="file" id="image_input" name="image" style="display: none;" accept="image/*" onchange="handleFileUpload(event)">
+                    <input type="text" id="chat_input" placeholder="傳訊息給 覺 GPT...">
+                    <button id="sendButton" onclick="sendMessage()">
+                      <i class="far fa-paper-plane"></i>
+                    </button>
+                  </div>
                 </div>
-              </div>
 						</div>
 
             
 					</div>
-
-
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<h2>Get in touch</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Name" />
-										</div>
-										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" />
-										</div>
-										<div class="field">
-											<textarea name="message" id="message" placeholder="Message"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send" class="primary" /></li>
-									</ul>
-								</form>
-							</section>
-							<section>
-								<h2>Follow</h2>
-								<ul class="icons">
-									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
-
 			</div>
 
   
